@@ -1,5 +1,3 @@
-import com.example.appconfigplugin.ProjectProperties
-import com.example.appconfigplugin.projectProperties
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -10,7 +8,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-    id("app-config-plugin")
+    alias(libs.plugins.basshead.loadSecretsPlugin)
 }
 
 kotlin {
@@ -85,7 +83,6 @@ android {
         }
     }
     buildTypes {
-        val projectProperties : ProjectProperties = projectProperties().get()
         getByName("release") {
             isMinifyEnabled = false
         }

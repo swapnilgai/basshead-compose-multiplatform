@@ -7,5 +7,5 @@ plugins {
     alias(libs.plugins.composeMultiplatform) apply false
     alias(libs.plugins.composeCompiler) apply false
     alias(libs.plugins.kotlinMultiplatform) apply false
-    id("app-config-plugin") apply false
+    alias(libs.plugins.basshead.loadSecretsPlugin ) apply false
 }

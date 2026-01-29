@@ -1,5 +1,4 @@
-package com.example.appconfigplugin
-
+import org.basshead.appconfigplugin.model.ProjectProperties
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -34,7 +33,7 @@ internal fun Project.loadLocalProperty(file: String = "keystore.properties"): Pr
         baseUrl = projectProperties.getProperty("BASE_URL"),
         apiKey = projectProperties.getProperty("API_KEY"),
 
-    )
+        )
 }
 
 private fun Project.setApiProperties(projectProperties: ProjectProperties) {
