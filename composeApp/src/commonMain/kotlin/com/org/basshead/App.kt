@@ -18,6 +18,7 @@ import org.jetbrains.compose.resources.painterResource
 
 import basshead_compose_multiplatform.composeapp.generated.resources.Res
 import basshead_compose_multiplatform.composeapp.generated.resources.compose_multiplatform
+import org.basshead.core.component.LoadingComponent
 
 @Composable
 @Preview
@@ -40,6 +41,8 @@ fun App() {
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
+
+                    LoadingComponent()
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
                 }

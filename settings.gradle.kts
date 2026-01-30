@@ -34,3 +34,4 @@ plugins {
 
 includeBuild("app-config-plugin")
 include(":composeApp")
+include(":core")

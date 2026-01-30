@@ -30,7 +30,7 @@ gradlePlugin{
     }
 
     plugins.register("androidLibraryConventionPlugin") {
-        id = libs.plugins.basshead.kotlinMultiplatform.get().pluginId
+        id = libs.plugins.basshead.androidLibrary.get().pluginId
         implementationClass = "AndroidLibraryConventionPlugin"
     }
 
